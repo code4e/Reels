@@ -1,0 +1,35 @@
+.signup-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.signup-card{
+    width: 27vw;
+    margin: 5%;
+}
+.reels-logo{
+    display: flex;
+    justify-content: center;
+}
+.alert-container{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.policy-cont{
+    margin: 5px;
+    display:flex;
+    justify-content: center;
+}
+.login-cont{
+    display:flex;
+    justify-content: center;
+    font-size: smaller;
+}
+@media only screen and (max-width:620px){
+    .signup-card{
+        width: 60%;
+    }
+    .logo{
+        width: 35%;
+    }
+}
