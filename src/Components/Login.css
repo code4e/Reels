@@ -1,11 +1,15 @@
 .login-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .login-card {
     width: 27vw;
     margin: 5%;
+    transform: scale(0.9);
+    position: relative;
+    top: 4vh;
 }
 
 .reels-logo {
@@ -31,12 +35,6 @@
     font-size: smaller;
 }
 
-.login-main-cont {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    transform: scale(0.9);
-}
 
 .forgot-pass-cont {
     display: flex;
@@ -45,20 +43,17 @@
     font-size: large;
 }
 
-.imgcar {
-    height: 900px;
-    width: 580px;
-    border-radius: 70px;
-    margin-right: 2vw;
+.imgcar{
+    margin-top: 8vh;
+    height: 590px;
+    width: 441px;
     position: relative;
 }
 
-.car {
-    position: absolute;
-    top: 13.5vh;
-    left: 9vw;
-    width: 375px;
-    height: 664px;
-    object-fit: contain;
-    overflow: hidden;
+.car{
+    height: 423px;
+    width: 241px;
+    position: absolute; 
+    left: 143px;
+    top: 93px;
 }
