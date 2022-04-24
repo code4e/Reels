@@ -28,12 +28,13 @@ const ForgotPassword = () => {
             }, 2000);
             return;
         }
+
         try {
             setError('');
             setLoading(true);
             let res = await SendPassResetEmail(email);
             setLoading(false);
-            navigate("/passwordreset")
+            navigate("/passwordreset", { state: { passwordResetState: 'Password successfully changed. Please check your email'} })
 
         } catch (err) {
             setError(err);
@@ -41,6 +42,7 @@ const ForgotPassword = () => {
                 setError('');
             }, 2000);
             setLoading(false);
+            navigate("/passwordreset", { state: { passwordResetState: 'Oops! Something went wrong.'} })
             return;
         }
     }

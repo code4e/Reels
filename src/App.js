@@ -11,6 +11,7 @@ import {
 import { AuthProvider } from './Context/AuthContext';
 import PrivateRoute from './Components/PrivateRoute';
 import ForgotPassword from './Components/ForgotPassword';
+import PasswordResetStatus from './Components/PasswordResetStatus';
 import React from 'react';
 
 
@@ -38,10 +39,11 @@ function App() {
           <Route path="/feed" element={<PrivateRoute />}>
             <Route path="/feed" element={<Feed replace to="feed" />} />
             {/* <Route path="feed" element={<Feed />} /> */}
-            
           </Route>
 
-          <Route path="forgotpassword" element={< ForgotPassword />}/>
+          <Route path="/forgotpassword" element={< ForgotPassword />}/>
+
+          <Route path="/passwordreset" element={< PasswordResetStatus />}/>
 
         </Routes>
       </AuthProvider>

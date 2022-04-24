@@ -1,7 +1,7 @@
 import React, {Children, useContext} from 'react'
 import { AuthContext } from '../Context/AuthContext';
 // import { Route, Navigate,Outlet } from 'react-router-dom'; 
-import Feed from './Feed';
+
 // // function PrivateRoute({component:Component,...rest}) {
 // //     const {user} = useContext(AuthContext) 
 // //     return (
@@ -29,7 +29,7 @@ import Feed from './Feed';
 
 	const  PrivateRoute=(props) =>{
 
-        console.log(props)
+        // console.log(props)
         const {user} = useContext(AuthContext) 
 	
 

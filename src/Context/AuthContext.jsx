@@ -6,6 +6,7 @@ export const AuthContext = React.createContext();
 
 export function AuthProvider({children}){
     const [user, setUser] = useState();
+    // const [resetPass, setResetPass] = useState(false);
     const [loading, setLoading] = useState(true);
 
     const SignUp = async (email, password) => await Auth.createUserWithEmailAndPassword(email, password);
@@ -29,6 +30,7 @@ export function AuthProvider({children}){
 
     const store = {
         user,
+        setUser,
         SignUp,
         Login,
         Logout,

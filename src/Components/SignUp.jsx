@@ -114,8 +114,10 @@ export default function SignUp() {
                         userId: uid,
                         email: email,
                         password: password,
+                        fullname: name,
                         profileURL: url,
-                        createdAt: serverTimestamp()
+                        createdAt: serverTimestamp(),
+                        postsIds: null,
                     }
                     const newUsersRef = doc(collection(db, "users"));
                     const resPromise = setDoc(doc(db, "users", uid), usersDocData);

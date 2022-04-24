@@ -78,7 +78,6 @@ export default function Login() {
             setError('');
             setLoading(true);
             let res = await login(email, password);
-
             setLoading(false);
             navigate("/feed");
             
@@ -88,7 +87,8 @@ export default function Login() {
                 setError('');
             }, 2000);
             setLoading(false);
-            return;
+            navigate("/login");
+            // return;
         }
     }
 
