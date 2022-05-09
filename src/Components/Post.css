@@ -1,0 +1,41 @@
+.video-container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+}
+.video-container::-webkit-scrollbar{
+    display: none;
+}
+.videos{
+    position: relative;
+}
+.fa{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    /* border: 2px solid wheat; */
+}
+.like-cont{
+    position: absolute;
+    bottom: 3%;
+    left: 9%;
+    color: white;
+    cursor: pointer;
+}
+.liked{
+    color: red;
+}
+.unliked{
+   
+    color: white;
+}

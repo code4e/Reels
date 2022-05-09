@@ -1,0 +1,6 @@
+.video-styling{
+    width: 100%;
+    height: 80vh;
+    /* allows video to not be half scrollable */
+    scroll-snap-align: start;
+}

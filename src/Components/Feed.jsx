@@ -4,7 +4,7 @@ import { AuthContext } from '../Context/AuthContext';
 import UploadFile from './UploadFile';
 import { doc, getDoc, onSnapshot } from "firebase/firestore";
 import { db, storage } from '../Firebase';
-
+import Posts from './Posts';
 
 function Feed() {
   const { user, Logout } = useContext(AuthContext);
@@ -12,7 +12,7 @@ function Feed() {
   const location = useLocation();
   useEffect(() => {
     const docRef = doc(db, "users", user.uid);
-
+    // console.log(docRef.id);
     const unsub = onSnapshot(docRef, (doc) => {
       // console.log(doc.data());
       setUserData(doc.data());
@@ -25,7 +25,7 @@ function Feed() {
 
   }, [user]);
 
-  // console.log(user.uid);
+ 
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
@@ -35,6 +35,8 @@ function Feed() {
 
       </div>
       <UploadFile user={userData} />
+
+      <Posts user={userData}  /> 
 
     </div>
   )
